@@ -2,11 +2,8 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=1920, height=1080, initial-scale=1.0"
-    />
-    <title>OBS Bottom Overlay - Dengan Kotak QR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OBS Bottom Overlay - Responsive Full Width</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,8 +19,8 @@
 
       html,
       body {
-        width: 1920px;
-        height: 1080px;
+        width: 100%;
+        height: 100%;
         background: transparent;
         overflow: hidden;
         font-family: "Plus Jakarta Sans", sans-serif;
@@ -72,11 +69,12 @@
         }
       }
 
+      /* Menggunakan width: 100% agar otomatis pas 100% lebar kanvas */
       .bottom-bar {
         position: fixed;
         bottom: 0;
         left: 0;
-        width: 1920px;
+        width: 100%;
         height: 185px;
         background: linear-gradient(
           90deg,
@@ -90,7 +88,7 @@
           inset 0 1px 8px rgba(0, 255, 255, 0.1);
         display: flex;
         align-items: center;
-        padding: 0 42px 0 0;
+        padding: 0 36px 0 0;
         overflow: hidden;
       }
 
@@ -99,7 +97,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        left: 413px;
+        left: 380px;
         pointer-events: none;
         z-index: 0;
         overflow: hidden;
@@ -135,28 +133,28 @@
 
       .meteor-1 {
         top: 12px;
-        left: 380px;
+        left: 320px;
         width: 120px;
         animation: meteor 4.5s linear infinite 0.4s;
       }
 
       .meteor-2 {
         top: 8px;
-        left: 780px;
+        left: 720px;
         width: 100px;
         animation: meteor 5.4s linear infinite 2.1s;
       }
 
       .meteor-3 {
         top: 18px;
-        left: 1180px;
+        left: 1120px;
         width: 110px;
         animation: meteor 4.8s linear infinite 3.5s;
       }
 
-      /* Ruang Facecam diperlebar menjadi 410px */
+      /* Ruang Facecam di Kiri */
       .facecam-space {
-        width: 410px;
+        width: 380px;
         height: 100%;
         flex-shrink: 0;
       }
@@ -166,7 +164,7 @@
         z-index: 2;
         width: 3px;
         height: 132px;
-        margin-right: 36px;
+        margin-right: 32px;
         flex-shrink: 0;
         border-radius: 999px;
         background: linear-gradient(
@@ -194,43 +192,43 @@
       .status-row {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 12px;
         margin-bottom: 6px;
       }
 
       .on-air-pill {
         display: inline-flex;
         align-items: center;
-        gap: 9px;
-        padding: 4px 14px;
+        gap: 8px;
+        padding: 4px 12px;
         border-radius: 999px;
         background: rgba(0, 255, 255, 0.08);
         border: 1.5px solid rgba(0, 255, 255, 0.45);
         color: #a8ffff;
         font-family: "Chakra Petch", sans-serif;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 800;
         letter-spacing: 0.14em;
       }
 
       .live-dot {
-        width: 9px;
-        height: 9px;
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         background: #ff3b5c;
         animation: pulseDot 1.8s infinite ease-in-out;
       }
 
       .live-sublabel {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 700;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.18em;
         color: rgba(203, 226, 235, 0.72);
       }
 
       .main-title {
         font-family: "Chakra Petch", sans-serif;
-        font-size: 46px;
+        font-size: 40px;
         font-weight: 800;
         line-height: 1.05;
         letter-spacing: 0.03em;
@@ -247,11 +245,11 @@
       .tagline-row {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 14px;
       }
 
       .tagline {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
         color: #9cb6c2;
         white-space: nowrap;
@@ -265,10 +263,10 @@
       .qr-box {
         position: relative;
         z-index: 2;
-        width: 148px;
-        height: 148px;
+        width: 144px;
+        height: 144px;
         flex-shrink: 0;
-        margin-left: 32px;
+        margin-left: 28px;
         padding: 6px;
         background: #ffffff;
         border-radius: 14px;
